@@ -24,6 +24,10 @@ with sqlite3.connect('student.db') as con:
     ('Kairat', 'Nurtas', 1995, 'Photography', 13),
     ('Aijan', 'Aibekova', 1997, 'Music', 5)''')
 
+    cur.execute('''select * from students''')
+    for i in cur.fetchall():
+        print(i)
+
 #     cur.execute('''SELECT * FROM students WHERE LENGTH(last_name) > 10;
 # ''')
 
@@ -35,3 +39,6 @@ with sqlite3.connect('student.db') as con:
 
 #     cur.execute('''DELETE FROM students WHERE id % 2 = 0;
 # ''')
+
+
+
